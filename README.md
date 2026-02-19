@@ -98,3 +98,117 @@ Uit de presentaties heb ik veel verschillende dingen geleerd, namelijk alle onde
 ### Wat ga ik morgen doen?
 Morgen hebben we gesprekjes in groepjes en gaan we het hebben over onze eerste ideëen die we hebben voor onze projecten van beide vakken.
 Daarna ga ik bedenken waar ik nog even aan wil werken na de gesprekjes, en dan is het vakantie!
+
+
+
+
+### Weekly geek 2 Peter-Paul Koch (19-02)
+#### Browsers & support detection
+
+**Wat is een browser?: **
+- HTML
+- CSS
+- DOM (een soort kopie voor je HMTL maar voor je JavaScript.)
+- AOM (Accesiblity object model)
+- interface
+- JavaScript engine (als aparte component)
+
+In theorie is het mogelijk dezelfde browser te houden, met een andere JavaScript engine.
+
+![IMG_2207](https://github.com/user-attachments/assets/6afd4a1e-302e-4448-a990-3b8c4067bdb3)
+
+Een parser is een programma wat een screen neemt (HTML) en kijkt wat er eigenlijk in zit.
+Er is ook een JS en CSS parser.
+
+Layout is erg zwaar voor de browser, zorg dat dit van te voren is berekend, en niet plots gedaan wordt. (Keep it stupid simple)
+
+#### Rendering engine:
+
+Verantwoordelijk voor HTML en CSS parsing en rendering, constructie van de DOM en AOM trees. Dus NIET interface of JavaScript engine.
+
+#### Core vs DOM
+
+Core: wat JavaScript een programmeertaal maakt.
+
+DOM: de manier waarop JavaScript delen van de HTML-pagina's kan aanspreken en wijzigen.
+
+**Render blocking**
+- CSS
+- JavaScript, tenzij async of defer
+
+#### Defer vs async
+
+Do it now:
+```<script src>```
+
+Do it later:
+```<script defer src>```
+
+I don't care when you do it, just not now:
+```<script async src>```
+
+#### Backward compatibility
+- Alles wat de browser ooit heeft ondersteund, moet de browser voor altijd blijven ondersteunen.
+
+voorbeelden: 
+
+```[form object].elements```
+```<body bgcolor="abdaca">``` heel oud, maar werkt wel nog.
+```<frameset>``` een soort voorganger van de ```<iframe>```
+
+#### Browser als platform
+"Browsers are the most hostile development platforms in the world" - Douglas Crockford
+
+
+#### Korte geschiedenis van browsers
+**WWW Browser (1990)**
+
+Allereerste browser, gebouwd te Cern door Tim Berners-Lee en consorten.
+
+Herbouwd in 2019: https://worldwideweb.cern.ch/
+
+**Mosaic (1993)** 
+
+De eerste browser die plaatjes had
+
+**Netscape (1994)** 
+
+De eerste ECHTE browser
+
+**Internet Explorer (1995)** 
+
+De eerste gratis browser en van Microsoft.
+
+**Opera (1995)**
+
+**IE 5 Mac (2000)**
+
+**Konqueror (2000)**
+
+**Safari (2003)**
+
+De eerste eigen browser van Apple
+
+**Firefox (2004)**
+
+Van Mozilla
+
+**Safari iOS (2007)**
+
+**Chrome (2008)**
+
+**Flow (2020)**
+
+Eigen rendering engine, onvoorspelbaar hoe het met CSS omgaat. 
+
+**Ladybird (2024)**
+
+Ook een eigen rendering engine. Begonnen als hobbyproject om van zijn drugsverslaving af te komen.
+
+**Igalia**
+
+Geen browser maker, maar weten er veel vanaf. Spaans open source bedrijf, richten zich op het maken van delen van rendering engines.
+
+
+
+#### Conclusion
