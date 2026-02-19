@@ -34,9 +34,14 @@ Ik wil het controlpanel van een DJ panel namaken. Ik wil dit doen door een aanta
 ### Wat heb ik vandaag gedaan?
 Ik heb vandaag samen met mijn groepje onderzoek gedaan naar carousels. We hebben veel CSS code bestudeerd en ook toegepast in onze eigen ontwerpen. 
 
-We hebben verschillende Codepen's gemaakt die de verschillende niveau's tonen van soorten carousels. Zo hebben we een absolute basis, maar ook een wat meer advanced versie gemaakt die we kunnen laten zien aan de klas. Alles in de codepens word ook ondersteund door comments die ervoor zorgen dat alles net wat duidelijker is. 
+We hebben verschillende Codepen's gemaakt die de verschillende niveau's tonen van soorten carousels. Zo hebben we een absolute basis, maar ook een wat meer advanced versie gemaakt die we kunnen laten zien aan de klas. Alles in de codepens word ook ondersteund door comments die ervoor zorgen dat alles net wat duidelijker is.
+
+Link naar Codepen
+https://codepen.io/MATS-the-typescripter/pen/VYjJYjV
+
 
 Ook hebben we een presentatie gemaakt waarin alles staat wat wij morgen tijdens de presentatie willen laten zien.
+<img width="1396" height="788" alt="Screenshot 2026-02-19 at 15 35 00" src="https://github.com/user-attachments/assets/99f5166d-10e3-428a-a16c-556902e3cc3d" />
 
 En als laatste hebben we een kleine checkout gehad met Sanne :)
 
@@ -60,5 +65,36 @@ Ik heb vandaag veel verschillende dingen geleerd, namelijk:
 
 Dit zijn de verschillende dingen die ik heb geleerd bij het maken van een carousel.
 
-### Wat ga ik morgen  doen?
+### Wat ga ik morgen doen?
 Morgen gaan we in de ochtend presenteren wat we vandaag hebben gedaan. Daarna krijgen we eindelijk te horen wat onze daadwerkelijke eindopdracht gaat worden. Ik ben benieuwd :) 
+
+
+
+
+
+## Tweede checkout (19-02)
+### Wat heb ik vandaag gedaan?
+We begonnen vandaag met onze presentaties. We hebben veel presentaties aangehoord over allerlei verschillende onderwerpen.
+
+**Dat waren de volgende onderwerpen:**
+- :has
+- containers
+- carousels
+- Makeup
+- Scroll-animations
+- Anchors
+
+Na de presentaties hebben we te horen gekregen wat de eindopdracht is, en dat we hierin kunnen kiezen. Ik heb gekozen voor de control panel opdracht, met hierbij het idee om een DJ panel te maken. Ik hierbij ook al twee kleine schetjes gemaakt.
+
+
+### Hoe lang duurde het?
+Vandaag hebben de presentaties ongeveer 1,5 tot 2 uur gekost, daarna hebben we een tijdje pauze gehad en zijn we door gegaan met de eindopdracht en hieraan werken. Dit heeft zo'n 2,5 uur geduurd.
+
+
+###  Wat heb ik geleerd?
+Uit de presentaties heb ik veel verschillende dingen geleerd, namelijk alle onderwerpen die we hebben gehad. Uiteraard betekent dit niet dat ik hier nu alls over weet, maar ik heb er in ieder geval een beter idee van gekregen.
+
+
+### Wat ga ik morgen doen?
+Morgen hebben we gesprekjes in groepjes en gaan we het hebben over onze eerste ideëen die we hebben voor onze projecten van beide vakken.
+Daarna ga ik bedenken waar ik nog even aan wil werken na de gesprekjes, en dan is het vakantie!
