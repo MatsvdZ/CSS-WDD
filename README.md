@@ -211,4 +211,8 @@ Geen browser maker, maar weten er veel vanaf. Spaans open source bedrijf, richte
 
 
 
-#### Conclusion
+
+### Bronnen:
+
+https://css-tricks.com/the-shapes-of-css/
+

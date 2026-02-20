@@ -1,0 +1,36 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center; 
+  align-items: center;      
+  height: 100vh;           
+}
+
+base-plate {
+  height: 90vh;
+  width: 85vw;
+  background: black;
+  border-radius: 2rem;
+}
+
+screen-display {
+    display: block;
+    height: 30vh;
+    width: 80vw;
+    background: pink;
+    margin: auto;
+}
+
+turning-disc {
+    display: block;
+    height: 26rem;
+    width: 26rem;
+    border-radius: 999px;
+    background: lime;
+    margin: auto;
+    margin-top: 5rem;
+}
