@@ -216,3 +216,9 @@ Geen browser maker, maar weten er veel vanaf. Spaans open source bedrijf, richte
 
 https://css-tricks.com/the-shapes-of-css/
 
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio
+
+https://css-tricks.com/complete-guide-css-grid-layout/
+
+
+
