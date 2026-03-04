@@ -102,8 +102,8 @@ Daarna ga ik bedenken waar ik nog even aan wil werken na de gesprekjes, en dan i
 
 
 
-### Weekly geek 2 Peter-Paul Koch (19-02)
-#### Browsers & support detection
+## Weekly geek 2 Peter-Paul Koch (19-02)
+### Browsers & support detection
 
 **Wat is een browser?: **
 - HTML
@@ -122,11 +122,11 @@ Er is ook een JS en CSS parser.
 
 Layout is erg zwaar voor de browser, zorg dat dit van te voren is berekend, en niet plots gedaan wordt. (Keep it stupid simple)
 
-#### Rendering engine:
+### Rendering engine:
 
 Verantwoordelijk voor HTML en CSS parsing en rendering, constructie van de DOM en AOM trees. Dus NIET interface of JavaScript engine.
 
-#### Core vs DOM
+### Core vs DOM
 
 Core: wat JavaScript een programmeertaal maakt.
 
@@ -147,7 +147,7 @@ Do it later:
 I don't care when you do it, just not now:
 ```<script async src>```
 
-#### Backward compatibility
+### Backward compatibility
 - Alles wat de browser ooit heeft ondersteund, moet de browser voor altijd blijven ondersteunen.
 
 voorbeelden: 
@@ -156,11 +156,11 @@ voorbeelden:
 ```<body bgcolor="abdaca">``` heel oud, maar werkt wel nog.
 ```<frameset>``` een soort voorganger van de ```<iframe>```
 
-#### Browser als platform
+### Browser als platform
 "Browsers are the most hostile development platforms in the world" - Douglas Crockford
 
 
-#### Korte geschiedenis van browsers
+### Korte geschiedenis van browsers
 **WWW Browser (1990)**
 
 Allereerste browser, gebouwd te Cern door Tim Berners-Lee en consorten.
@@ -208,6 +208,97 @@ Ook een eigen rendering engine. Begonnen als hobbyproject om van zijn drugsversl
 **Igalia**
 
 Geen browser maker, maar weten er veel vanaf. Spaans open source bedrijf, richten zich op het maken van delen van rendering engines.
+
+
+## Weekly Nerd: Nils Binder
+
+### CSS to the rescue
+
+Nils werkt bij 9Elements in Duitsland.
+
+https://9elements.com/
+
+Hier gebruiken ze 3 units:
+
+- Communication Design
+- Product Development
+- Web Development
+
+Nils heeft een UX design gemaakt voor Schalke04 hun native app voor zowel iOS als Android. Het was voor Nils zijn grootste opdracht die hij heeft gedaan
+
+### Project OECD
+
+Bij dit project moet hij opzoek naar de juiste kleuren voor accessibility voor OECD, een bedrijf dat chart maakt.
+
+
+### CSS day 2023
+
+**Hieronder staan een aantal talks die er zijn gegeven op CSS day**
+
+Tinker by night - door Sanne ’t Hooft
+
+Creative coding - Jhey Topkins
+
+Personal website - Sophie Koonin
+
+Building components Stephanie Eckles
+
+Structuring & Restructuring - Manuel Matuzoviç
+
+Selector Performance - Patrick Brosset
+
+
+Vroeger gebruikte iedereen Photoshop om websites te designen. Nu gebruiken ze daar natuurlijk Figma voor. De interface van Figma is veel gemakkelijker om te gebruiken dan die van Photoshop, en is redelijk gelijk aan hoe het moet in CSS.
+Zo zit er in Figma ook flex, gap, padding, justify content ect. Ook zijn er variabelen in Figma, wat je natuurlijk ook gebruikt in CSS.
+
+In 2016 was er een tweet die eigenlijk zei dat we veel dezelfde soort sites maken, maar toen kwam Figma waardoor je veel sneller kunt designen.
+
+Er zijn ook veel frameworks zoals Tailwind, wat ook het proces van designen sneller maakt. Maar nu ook AI gebruikt wordt, is de web development omgeving lichtelijk ‘saai.’
+
+Kijk niet naar pixels, maar kijk naar de ratio en de relatie tussen verschillende objecten en hun positie. Hierbij kan je CSS grids gebruiken. Je kunt dus grid gebruiken in CSS met de 1fr/2fr met grid-templatecolumns.
+
+```
+.fancy-text {
+	display: grid;
+	grid-template-columns: 2fr 3fr auto 1fr;
+}
+
+h1 {
+	grid-column: 2/4}
+	p {grid-column: 3/4}
+```
+
+Het past zich dus aan op basis van het scherm en een max-width aan de paragraaf geven. Dit is dus mooier op een groot scherm, en niet op mobiel want je hebt te weinig ruimte
+
+
+### Animatie
+
+Je kan animaties als het ware als een soort stop motion maken door meerdere foto’s achter elkaar te plakken en deze te animeren. De animatie is eigenlijk een lange strip van images die als het ware achter elkaar worden getoond.
+
+Animation: stop-motion 3s steps(31, end) infinite
+
+
+### Subgrid
+
+Dit is het laten groeien van een soot blokken t.o.v. andere blokken voor bijvoorbeeld een tijdschema.
+
+Je gebruikt dit om de items te displayen, als een rij groeit, groeien de andere rijen ook mee.
+
+
+### First line selector
+	
+Er is een first line selector die je kunt gebruiken om de eerste line van tekst anders te stijlen dan de rest van de tekst.
+
+
+### View transitions
+
+Je kunt transities hebben tussen verschillende pagina’s, zo kan je bijvoorbeeld mooi een taal switch toevoegen aan je website, inclusief animaties.
+
+
+
+
+
+
 
 
 
