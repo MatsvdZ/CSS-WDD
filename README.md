@@ -210,6 +210,20 @@ Ook een eigen rendering engine. Begonnen als hobbyproject om van zijn drugsversl
 Geen browser maker, maar weten er veel vanaf. Spaans open source bedrijf, richten zich op het maken van delen van rendering engines.
 
 
+## Voortgang week 1
+
+Ik heb deze week het begin gemaakt aan het vak CSS. Ik heb onderzoek gedaan en een presentatie gegeven over carrousels in CSS en hoe dit precies in elkaar zit. Daarnaast heb ik ook geluisterd naar andere mensen hun presentaties over de onderwerpen die zij hebben behandeld. Verder hebben we te horen gekregen wat precies de eindopdracht is, waarin ik mijn keuze heb gemaakt om een control panel te maken, in de vorm van een DJ paneel.
+
+Ik heb snel een kleine basis neergezet met drie vormpjes, om zo in ieder geval alvast even wat te hebben staan.
+
+
+### Volgende week
+Volgende week ga ik echt aan de slag met het ontwerpen en maken van mijn DJ paneel. Ik hoop een of meerdere soorten controls te maken en al te ontwerpen zodat deze er in ieder geval goed uitzien.
+
+
+
+
+
 ## Weekly Nerd: Nils Binder
 
 ### CSS to the rescue
@@ -296,14 +310,26 @@ Je kunt transities hebben tussen verschillende pagina’s, zo kan je bijvoorbeel
 
 
 
+## Derde checkout (04-03)
+### Wat heb ik vandaag gedaan?
+We begonnen de dag met een weekly nerd van Nils Binder over wie hij is en wat hij doet. Ik heb vandaag gewerkt aan de layout van mijn project en het maken van verschillende sliders. Zo heb ik een slider gemaakt die lijkt op een slider op een DJ paneel. Daarnaast heb ik ook een soort knob gemaakt met een slider die langs verschillende stappen gaan.
+
+<img width="560" height="355" alt="Screenshot 2026-03-04 at 15 30 45" src="https://github.com/user-attachments/assets/e6937873-41bb-4b1d-89b5-bd452da8bd08" />
+
+
+### Hoe lang duurde het?
+Ik heb in totaal zo'n 4 uur echt aan mijn eigen project kunnen werken, waarin ik dus vooral aan de sliders en layout heb gezeten.
+
+###  Wat heb ik geleerd?
+Ik heb erg veel geleerd over grid en hoe ik op verschillende manieren alles kan positioneren. Daarnaast heb ik veel geleerd over de ```input="range"``` waarmee ik mijn slider en draaiknop heb gemaakt.
+
+### Wat ga ik morgen doen?
+Ik ga morgen verder met het perfectioneren van mijn grid, en ik wil het mijn sliders en knop daadwerkelijk iets laten doen.
 
 
 
 
-
-
-
-### Bronnen:
+## Bronnen:
 
 https://css-tricks.com/the-shapes-of-css/
 
