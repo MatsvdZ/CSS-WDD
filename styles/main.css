@@ -1,31 +1,28 @@
 /*******************/
 /* MARK: BASIC CSS */
 /*******************/
-
-:root {
-  --s: clamp(260px, 30vw, 520px); /* slider lengte op desktop */
+:root{
+  --s: clamp(260px, 30vw, 520px); /* fader lengte op desktop */
 }
 
-html,
-body {
+html, body{
   height: 100%;
   margin: 0;
 }
 
-main {
+main{
   min-height: 100vh;
   display: grid;
   place-items: center;
   padding: 2vh 2vw;
 }
 
-/************************/
+/*************************/
 /* MARK: BASE PLATE GRID */
-/************************/
-/* base-plate = main > div */
-main > div {
+/*************************/
+main > div{
   display: grid;
-  background: #000;
+  background: #2f2f2f;
   border-radius: 2rem;
   box-sizing: border-box;
   overflow: hidden;
@@ -35,41 +32,57 @@ main > div {
   padding: clamp(16px, 3vh, 40px);
   gap: clamp(14px, 2.5vh, 28px);
 
-  /* SMALL default: screen boven, slider links, disc rechts */
+  /* SMALL: screen boven, links controls (fader+knob), rechts decks */
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "screen screen"
-    "slider disc";
+    "fader  decks"
+    "knob   decks";
+
   align-items: center;
+  justify-items: center;
 }
 
 /********************/
-/* MARK: SCREEN (1) */
+/* MARK: SCREEN     */
 /********************/
-main > div > div:nth-child(1) {
+main > div > section:nth-of-type(1){
   grid-area: screen;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+main > div > section:nth-of-type(1) > div{
   width: min(92%, 900px);
+  aspect-ratio: 16 / 6;
   background: hotpink;
   border-radius: 1rem;
-  aspect-ratio: 16 / 6;
-  justify-self: center;
+
+  /* reageert op fader */
+  filter: brightness(calc(0.6 + (var(--fader, 50) / 100)));
 }
 
 /********************/
-/* MARK: MIXER (2)  */
+/* MARK: FADER      */
 /********************/
-main > div > div:nth-child(2) {
-  grid-area: slider;
+main > div > section:nth-of-type(2){
+  grid-area: fader;
+  display: grid;
+  place-items: center;
+}
+
+/* wrapper rond de fader input */
+main > div > section:nth-of-type(2) > div{
   width: 90px;
   height: 420px;
   display: grid;
   place-items: center;
-  justify-self: center;
 }
 
 /* range styling (vertical small) */
-main > div > div:nth-child(2) input[type="range"] {
+main > div > section:nth-of-type(2) input[type="range"]{
   writing-mode: vertical-lr;
   direction: rtl;
 
@@ -84,35 +97,32 @@ main > div > div:nth-child(2) input[type="range"] {
   border-radius: 18px;
   box-shadow:
     inset 0 0 0 2px #1f1f1f,
-    inset 0 18px 30px rgba(255, 255, 255, 0.04),
-    0 16px 26px rgba(0, 0, 0, 0.35);
+    inset 0 18px 30px rgba(255,255,255,.04),
+    0 16px 26px rgba(0,0,0,.35);
 
   padding: 18px 0;
   box-sizing: border-box;
   cursor: pointer;
 }
 
-/* track */
-main
-  > div
-  > div:nth-child(2)
-  input[type="range"]::-webkit-slider-runnable-track {
+/* WebKit track */
+main > div > section:nth-of-type(2) input[type="range"]::-webkit-slider-runnable-track{
   width: 12px;
   border-radius: 999px;
   background:
     repeating-linear-gradient(
       to top,
-      rgba(255, 255, 255, 0.18) 0 2px,
+      rgba(255,255,255,.18) 0 2px,
       transparent 2px 16px
     ),
     linear-gradient(#2b2b2b, #141414);
   box-shadow:
     inset 0 0 0 2px #0a0a0a,
-    0 0 0 1px rgba(255, 255, 255, 0.06);
+    0 0 0 1px rgba(255,255,255,.06);
 }
 
-/* thumb (cap) */
-main > div > div:nth-child(2) input[type="range"]::-webkit-slider-thumb {
+/* WebKit thumb */
+main > div > section:nth-of-type(2) input[type="range"]::-webkit-slider-thumb{
   -webkit-appearance: none;
   appearance: none;
 
@@ -124,116 +134,167 @@ main > div > div:nth-child(2) input[type="range"]::-webkit-slider-thumb {
   background:
     repeating-linear-gradient(
         to right,
-        rgba(0, 0, 0, 0.35) 0 2px,
-        rgba(255, 255, 255, 0.16) 2px 4px
+        rgba(0,0,0,.35) 0 2px,
+        rgba(255,255,255,.16) 2px 4px
       )
       center/70% 30% no-repeat,
     linear-gradient(#e8e8e8, #bdbdbd);
 
   box-shadow:
-    0 12px 18px rgba(0, 0, 0, 0.35),
-    inset 0 7px 12px rgba(255, 255, 255, 0.28);
+    0 12px 18px rgba(0,0,0,.35),
+    inset 0 7px 12px rgba(255,255,255,.28);
 
   margin-left: calc((12px - 54px) / 2);
 }
 
-/* Firefox */
-main > div > div:nth-child(2) input[type="range"]::-moz-range-track {
+/* Firefox basics */
+main > div > section:nth-of-type(2) input[type="range"]::-moz-range-track{
   width: 12px;
   border-radius: 999px;
   background: linear-gradient(#2b2b2b, #141414);
   box-shadow: inset 0 0 0 2px #0a0a0a;
 }
-main > div > div:nth-child(2) input[type="range"]::-moz-range-thumb {
+
+main > div > section:nth-of-type(2) input[type="range"]::-moz-range-thumb{
   width: 54px;
   height: 34px;
   border-radius: 10px;
   border: 2px solid #111;
+
   background:
     repeating-linear-gradient(
         to right,
-        rgba(0, 0, 0, 0.35) 0 2px,
-        rgba(255, 255, 255, 0.16) 2px 4px
+        rgba(0,0,0,.35) 0 2px,
+        rgba(255,255,255,.16) 2px 4px
       )
       center/70% 30% no-repeat,
     linear-gradient(#e8e8e8, #bdbdbd);
+
   box-shadow:
-    0 12px 18px rgba(0, 0, 0, 0.35),
-    inset 0 7px 12px rgba(255, 255, 255, 0.28);
+    0 12px 18px rgba(0,0,0,.35),
+    inset 0 7px 12px rgba(255,255,255,.28);
 }
 
 /********************/
-/* MARK: DISCS (3,4)*/
+/* MARK: KNOB (4 steps) */
 /********************/
-main > div > div:nth-child(3),
-main > div > div:nth-child(4) {
+main > div > section:nth-of-type(3){
+  grid-area: knob;
+  display: grid;
+  place-items: center;
+}
+
+/* knob wrapper */
+main > div > section:nth-of-type(3) > div{
+  position: relative;
+  width: clamp(70px, 10vw, 110px);
+  aspect-ratio: 1 / 1;
+}
+
+/* knob disc body */
+main > div > section:nth-of-type(3) > div::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:999px;
+  background: radial-gradient(circle at 30% 30%, #555, #222 60%, #111);
+  box-shadow:
+    inset 0 0 0 2px rgba(255,255,255,.06),
+    inset 0 12px 18px rgba(255,255,255,.06),
+    0 14px 22px rgba(0,0,0,.35);
+}
+
+/* echte range: onzichtbaar maar klikbaar */
+main > div > section:nth-of-type(3) input[type="range"]{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  margin:0;
+  cursor:pointer;
+}
+
+/* indicator = extra inner div (2e child in knob wrapper) */
+main > div > section:nth-of-type(3) > div > div{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width: 6px;
+  height: 40%;
+  transform-origin: 50% 90%;
+  transform:
+    translate(-50%, -90%)
+    rotate(calc(-120deg + (var(--knob, 1) * 80deg))); /* 0..3 -> 4 standen */
+  border-radius:999px;
+  background: linear-gradient(#00ff80, rgba(0,255,128,.25));
+  box-shadow: 0 0 10px rgba(0,255,128,.25);
+  transition: transform 140ms ease;
+}
+
+/********************/
+/* MARK: DECKS      */
+/********************/
+main > div > section:nth-of-type(4){
+  grid-area: decks;
+  display: grid;
+  place-items: center;
+}
+
+/* discs */
+main > div > section:nth-of-type(4) > div{
   background: linear-gradient(red, blue);
   border-radius: 999px;
   aspect-ratio: 1 / 1;
   width: clamp(160px, 50vw, 420px);
-  justify-self: center;
 
+  /* reageert op fader */
   animation: spin calc(12s - (var(--fader, 50) * 0.1s)) linear infinite;
 }
 
-/* disc die je op small gebruikt */
-main > div > div:nth-child(3) {
-  grid-area: disc;
-}
-
-/* 2e disc verbergen op small */
-main > div > div:nth-child(4) {
+/* small: verberg 2e disc */
+main > div > section:nth-of-type(4) > div:nth-of-type(2){
   display: none;
 }
 
-/********************/
-/* MARK: SCREEN FX  */
-/********************/
-main > div > div:nth-child(1) {
-  filter: brightness(calc(0.6 + (var(--fader, 50) / 100)));
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes spin{
+  to{ transform: rotate(360deg); }
 }
 
 /********************************/
 /* MARK: LARGE SCREEN PLACEMENT */
 /********************************/
-@media (min-width: 900px) {
-  /* Base-plate grid: stevige kolommen + ruimte */
-  main > div {
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 420px) minmax(0, 1fr);
-    grid-template-rows: auto 1fr;
+@media (min-width: 1000px){
+
+  main > div{
+    grid-template-columns: minmax(280px, 1fr) minmax(260px, 520px) minmax(280px, 1fr);
+    grid-template-rows: auto auto 1fr;
     grid-template-areas:
       "screen screen screen"
-      "left   slider right";
+      ".      knob   ."
+      "left   fader  right";
 
     align-items: center;
     justify-items: center;
   }
 
-  /* SCREEN (child 1): schaalt netjes mee en blijft binnen plate */
-  main > div > div:nth-child(1) {
-    grid-area: screen;
+  /* screen schaalbaar */
+  main > div > section:nth-of-type(1) > div{
     width: 100%;
-    max-width: 980px; /* cap zodat hij niet absurd breed wordt */
-    justify-self: center;
+    max-width: 980px;
   }
 
-  /* MIXER (child 2) in het midden */
-  main > div > div:nth-child(2) {
-    grid-area: slider;
+  /* knob iets compacter op desktop */
+  main > div > section:nth-of-type(3) > div{
+    width: clamp(70px, 6vw, 95px);
+  }
+
+  /* fader container schaalbaar */
+  main > div > section:nth-of-type(2) > div{
     width: var(--s);
     height: auto;
-    justify-self: center;
-    align-self: center;
   }
 
-  /* Range horizontaal op desktop */
-  main > div > div:nth-child(2) input[type="range"] {
+  /* fader horizontaal + schaalbaar */
+  main > div > section:nth-of-type(2) input[type="range"]{
     writing-mode: horizontal-tb;
     direction: ltr;
 
@@ -242,44 +303,60 @@ main > div > div:nth-child(1) {
     padding: 0 clamp(12px, 2vw, 22px);
   }
 
-  /* WebKit track/thumb uitlijning horizontaal */
-  main
-    > div
-    > div:nth-child(2)
-    input[type="range"]::-webkit-slider-runnable-track {
+  /* track horizontaal */
+  main > div > section:nth-of-type(2) input[type="range"]::-webkit-slider-runnable-track{
     height: clamp(10px, 1.2vh, 14px);
+    width: auto;
   }
-  main > div > div:nth-child(2) input[type="range"]::-webkit-slider-thumb {
+
+  /* thumb horizontaal uitlijnen */
+  main > div > section:nth-of-type(2) input[type="range"]::-webkit-slider-thumb{
     width: clamp(44px, 5vw, 64px);
     height: clamp(26px, 3vh, 38px);
-
     margin-left: 0;
-    margin-top: calc((clamp(10px, 1.2vh, 14px) - clamp(26px, 3vh, 38px)) / 2);
+    margin-top: calc(
+      (clamp(10px, 1.2vh, 14px) - clamp(26px, 3vh, 38px)) / 2
+    );
   }
 
-  main > div > div:nth-child(2) input[type="range"]::-moz-range-thumb {
+  /* firefox horizontaal (minimaal) */
+  main > div > section:nth-of-type(2) input[type="range"]::-moz-range-track{
+    height: clamp(10px, 1.2vh, 14px);
+  }
+  main > div > section:nth-of-type(2) input[type="range"]::-moz-range-thumb{
     width: clamp(44px, 5vw, 64px);
     height: clamp(26px, 3vh, 38px);
   }
 
-  /* Firefox rail schaalbaar */
-  main > div > div:nth-child(2) input[type="range"]::-moz-range-track {
-    height: clamp(10px, 1.2vh, 14px);
+  /* decks: discs doen mee in base grid */
+  main > div > section:nth-of-type(4){
+    display: contents;
   }
 
-  /* DISCS: maak ze desktop-specifiek kleiner zodat ze nooit “hangen” */
-  main > div > div:nth-child(3),
-  main > div > div:nth-child(4) {
-    width: min(32vw, 360px); /* i.p.v. clamp tot 420 */
-    max-width: 100%; /* extra safety */
-    justify-self: center;
+  /* discs: NOOIT buiten de set */
+  main > div > section:nth-of-type(4) > div:nth-of-type(1),
+  main > div > section:nth-of-type(4) > div:nth-of-type(2){
+    width: min(100%, 340px);
+    max-width: 100%;
+    display: block;
   }
 
-  main > div > div:nth-child(3) {
+  main > div > section:nth-of-type(4) > div:nth-of-type(1){
     grid-area: left;
+    justify-self: end;
   }
-  main > div > div:nth-child(4) {
+
+  main > div > section:nth-of-type(4) > div:nth-of-type(2){
     grid-area: right;
     display: block;
+    justify-self: start;
+  }
+
+  /* zet fader area naam goed (in grid-template-areas heet hij fader) */
+  main > div > section:nth-of-type(2){
+    grid-area: fader;
+  }
+  main > div > section:nth-of-type(3){
+    grid-area: knob;
   }
 }
