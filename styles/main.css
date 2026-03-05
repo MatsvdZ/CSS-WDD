@@ -5,6 +5,31 @@
   --s: clamp(260px, 30vw, 520px); /* fader lengte op desktop */
 }
 
+body {
+  background: #0e0c18;
+  transition: background 200ms;
+}
+
+/* knop stand 0 */
+:root[style*="--knob: 0"] body {
+  background: radial-gradient(circle at 30% 30%, #1f1a2e, #0e0c18 55%, #05040a);
+}
+
+/* knop stand 1 */
+:root[style*="--knob: 1"] body {
+  background: radial-gradient(circle at 30% 30%, #1a2235, #0a1225 55%, #040710);
+}
+
+/* knop stand 2 */
+:root[style*="--knob: 2"] body {
+  background: radial-gradient(circle at 30% 30%, #11302a, #071a17 55%, #020a09);
+}
+
+/* knop stand 3 */
+:root[style*="--knob: 3"] body {
+  background: radial-gradient(circle at 30% 30%, #351a2c, #1d0815 55%, #0b0207);
+}
+
 html,
 body {
   height: 100%;
@@ -42,9 +67,13 @@ main > div {
   overflow: hidden;
 
   width: min(90vw, 1200px);
-  height: min(90vh, 800px);
-  padding: clamp(16px, 3vh, 40px);
-  gap: clamp(14px, 2.5vh, 28px);
+  min-height: min(90vh, 800px);
+  height: auto;
+  grid-auto-rows: min-content;
+  align-content: center;
+
+  padding: clamp(12px, 2.5vh, 40px);
+  gap: clamp(10px, 2vh, 28px);
 
   /* SMALL: h1 links, screen rechts; controls links; decks rechts */
   grid-template-columns: 1fr 1fr;
@@ -479,11 +508,18 @@ main > div > section:nth-of-type(4) {
     width: clamp(70px, 6vw, 95px);
   }
 
-  /* fader horizontaal */
+  /* fader container schaalbaar */
+  main > div > section:nth-of-type(2) > div {
+    width: var(--s);
+    height: auto;
+  }
+
+  /* fader horizontaal + schaalbaar */
   main > div > section:nth-of-type(2) input[type="range"] {
     writing-mode: horizontal-tb;
     direction: ltr;
-    width: 20rem;
+
+    width: 100%;
     height: clamp(44px, 6vh, 72px);
     padding: 0 clamp(12px, 2vw, 22px);
   }
