@@ -328,6 +328,40 @@ Ik ga morgen verder met het perfectioneren van mijn grid, en ik wil het mijn sli
 
 
 
+## Vierde checkout (05-03)
+### Wat heb ik vandaag gedaan?
+Ik heb vandaag redelijk wat voortgang geboekt. Ik ben aan de slag gegaan met de soundwaves en het animeren hiervan.
+
+<img width="304" height="886" alt="Screenshot 2026-03-05 at 15 15 23" src="https://github.com/user-attachments/assets/dbbcddac-0f30-445e-9b45-66587a4c66d0" />
+
+<img width="340" height="945" alt="Screenshot 2026-03-05 at 15 15 47" src="https://github.com/user-attachments/assets/ebc8be66-7d96-4d82-a115-9e838a7a15cc" />
+
+Ook ben ik vandaag aan de slag gegaan me thet werkend maken van mijn draaiknop.
+
+<img width="603" height="418" alt="Screenshot 2026-03-05 at 15 17 41" src="https://github.com/user-attachments/assets/42eaae6d-4e6e-471b-8516-8f4d79c08c94" />
+
+Deze knop zorgt er nu voor dat ik op elke stand van de knop een andere achtergrond kleur heb. 
+
+Daarnaast heb ik ook nog een klein beetje gedaan aan het ordenen van mijn code en het verbeteren van mijn responsiveness.
+
+En tot slot heb ik vandaag mijn CSS opgeschoond en CSS nesting gebruikt waar dit kon.
+
+### Hoe lang duurde het?
+Ik heb er vandaag zo'n 4 uur aan gezeten, en heb hier veel mee kunnen doen.
+
+
+###  Wat heb ik geleerd?
+Ik heb verder geoefend met het werkend maken van inputs. Daarnaast heb ik ook geoefend met het maken van lijnen en deze animeren op een manier dat het precies moet zijn zoals ik dat wil. 
+
+Ook het nesten van CSS is iets wat ik niet echt eerder heb gebruikt en waar ik vandaag dus ook lekker mee aan de slag ben gegaan.
+
+
+### Wat ga ik de volgende keer doen?
+De volgende keer wil ik de styling van mijn discs daadwerkelijk laten lijken op echte dj discs. Ook wil ik nog een extra input toevoegen die werkt als een soort aan/uit knop voor de hele dj set.
+
+
+
+
 
 ## Bronnen:
 
@@ -336,6 +370,10 @@ https://css-tricks.com/the-shapes-of-css/
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio
 
 https://css-tricks.com/complete-guide-css-grid-layout/
+
+https://codepen.io/yomateo/pen/ypbNrJ
+
+https://fonts.adobe.com/fonts/basset
 
 
 
