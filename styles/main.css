@@ -75,7 +75,7 @@ main > div {
   padding: clamp(12px, 2.5vh, 40px);
   gap: clamp(10px, 2vh, 28px);
 
-  /* SMALL: h1 links, screen rechts; controls links; decks rechts */
+  /* SMALL SCREEN */
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
@@ -87,12 +87,15 @@ main > div {
   justify-items: center;
 }
 
-/* plaats de h1 echt in de grid-area */
 main > div > h1 {
   grid-area: h1;
   justify-self: start;
   align-self: center;
 }
+
+/****************/
+/* MARK: SCREEN */
+/****************/
 
 main > div > section:nth-of-type(1) {
   grid-area: screen;
@@ -260,9 +263,9 @@ main > div > section:nth-of-type(1) {
   }
 }
 
-/***************/
-/* WAVE MOTION */
-/***************/
+/******************/
+/* BARS ANIMATIONS */
+/******************/
 
 @keyframes quiet {
   25% {
@@ -303,20 +306,21 @@ main > div > section:nth-of-type(1) {
 /***************/
 /* MARK: FADER */
 /***************/
+
 main > div > section:nth-of-type(2) {
   grid-area: fader;
   display: grid;
   place-items: center;
 
   input[type="range"] {
-    writing-mode: vertical-lr;
-    direction: rtl;
+    writing-mode: vertical-lr; /* maakt de slider verticaal */
+    direction: rtl; /* draait de waarde om (hoog = boven) */
 
     height: 360px;
     width: 70px;
     margin: 0;
 
-    -webkit-appearance: none;
+    -webkit-appearance: none; /* Haalt standaard browser styling weg */
     appearance: none;
 
     background: linear-gradient(#141414, #0b0b0b);
@@ -332,11 +336,12 @@ main > div > section:nth-of-type(2) {
   }
 
   input[type="range"]::-webkit-slider-runnable-track {
+    /* de rail waar de slider overheen beweegt */
     width: 12px;
     border-radius: 999px;
     background:
       repeating-linear-gradient(
-        to top,
+        /* Achtergrond van de rail */ to top,
         rgba(255, 255, 255, 0.18) 0 2px,
         transparent 2px 16px
       ),
@@ -347,6 +352,7 @@ main > div > section:nth-of-type(2) {
   }
 
   input[type="range"]::-webkit-slider-thumb {
+    /* Het blokje dat je sleept */
     -webkit-appearance: none;
     appearance: none;
 
@@ -357,7 +363,7 @@ main > div > section:nth-of-type(2) {
 
     background:
       repeating-linear-gradient(
-          to right,
+          /* De ribbels op de slider */ to right,
           rgba(0, 0, 0, 0.35) 0 2px,
           rgba(255, 255, 255, 0.16) 2px 4px
         )
@@ -368,7 +374,9 @@ main > div > section:nth-of-type(2) {
       0 12px 18px rgba(0, 0, 0, 0.35),
       inset 0 7px 12px rgba(255, 255, 255, 0.28);
 
-    margin-left: calc((12px - 54px) / 2);
+    margin-left: calc(
+      (12px - 54px) / 2
+    ); /* De thumb moet gecentreerd op de rail zitten */
   }
 
   input[type="range"]::-moz-range-track {
@@ -514,7 +522,7 @@ main > div > section:nth-of-type(4) {
     height: auto;
   }
 
-  /* fader horizontaal + schaalbaar */
+  /* fader horizontaal en schaalbaar */
   main > div > section:nth-of-type(2) input[type="range"] {
     writing-mode: horizontal-tb;
     direction: ltr;
@@ -551,7 +559,7 @@ main > div > section:nth-of-type(4) {
     height: clamp(26px, 3vh, 38px);
   }
 
-  /* ✅ decks: discs in grid + 2e disc zichtbaar */
+  /* discs in grid en 2e disc zichtbaar */
   main > div > section:nth-of-type(4) {
     display: contents;
   }
