@@ -210,7 +210,7 @@ Ook een eigen rendering engine. Begonnen als hobbyproject om van zijn drugsversl
 Geen browser maker, maar weten er veel vanaf. Spaans open source bedrijf, richten zich op het maken van delen van rendering engines.
 
 
-## Voortgang week 1
+## Voortgang week 1 (20-02)
 
 Ik heb deze week het begin gemaakt aan het vak CSS. Ik heb onderzoek gedaan en een presentatie gegeven over carrousels in CSS en hoe dit precies in elkaar zit. Daarnaast heb ik ook geluisterd naar andere mensen hun presentaties over de onderwerpen die zij hebben behandeld. Verder hebben we te horen gekregen wat precies de eindopdracht is, waarin ik mijn keuze heb gemaakt om een control panel te maken, in de vorm van een DJ paneel.
 
@@ -358,6 +358,20 @@ Ook het nesten van CSS is iets wat ik niet echt eerder heb gebruikt en waar ik v
 
 ### Wat ga ik de volgende keer doen?
 De volgende keer wil ik de styling van mijn discs daadwerkelijk laten lijken op echte dj discs. Ook wil ik nog een extra input toevoegen die werkt als een soort aan/uit knop voor de hele dj set.
+
+
+
+## Voortgang week 2 (06-03)
+Ik heb vandaag de feedback gehad van Sanne tijdens het voortgangsgesprek. Hierin heb ik mijn code laten zien waarop ik de feedback kreeg om meer om feedback/hulp te vragen. Dit is wat ik volgende week dan ook meteen ga doen, om zo mijn CSS te verbeteren.
+
+Verder was Sanne positief over de vordering van mijn control panel.
+
+
+### Volgende week
+Volgende week wil ik graag samen met Sanne aan het begin alvast samen zitten om zo mijn code even te reviewen en eventueel aan te passen naar een nettere structuur.
+
+Daarna wil ik verder met de styling van mijn werk, en nog de eis over de typografie verwerken in mijn project.
+
 
 
 
