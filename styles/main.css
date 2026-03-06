@@ -41,7 +41,7 @@ main {
   display: grid;
   place-items: center;
   padding: 2vh 2vw;
-  container-type: inline-size;
+  container-type: inline-size; /*  maakt main een container en container kijkt naar BREEDTE */
 }
 
 /********************/
@@ -199,7 +199,7 @@ main > div > section:nth-of-type(1) {
       animation-name: loud;
     }
 
-    /* delays for randomness */
+    /* delays for randomness (PRIEMGETALLEN!!!!!!!!) */
     > div:nth-of-type(1) {
       animation-delay: -0.1s;
     }
@@ -488,7 +488,9 @@ main > div > section:nth-of-type(4) {
 /********************************/
 /* MARK: LARGE SCREEN PLACEMENT */
 /********************************/
-@container (min-width: 900px) {
+
+/* Een container query kijkt niet naar de viewport, maar naar de grootte van een element (container) */
+@container (min-width: 900px) { /* laat het component zelf reageren op z’n eigen breedte */
   main > div {
     grid-template-columns:
       minmax(280px, 1fr)
