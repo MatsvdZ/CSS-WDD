@@ -375,6 +375,48 @@ Daarna wil ik verder met de styling van mijn werk, en nog de eis over de typogra
 
 
 
+## Vijfde checkout (11-03)
+### Wat heb ik vandaag gedaan?
+We begonnen de dag met de intro van Sanne waarin we een uitebreide uitleg kregen over kleuren en het gebruik hiervan. 
+
+Na deze intro heb ik een workshop gevolgd over container style queries. Ik vond dit een hele interessante workshop en wil hierdoor ook graag iets met deze style queries gaan doen.
+
+Ik ben begonnen met het bedenken met wat ik met de style querys wou doen. Dus ik heb er voor gekozen om een soort 'eyebleed' modus te maken, deze verandert het paneel van kleur met een gradient en deze gaat ook heen en weer. Ook veranderen de discs van kleur en worden ook een gradient. Ik Wil met deze modus het eigenlijk zo extreem lelijk maken dat je er niet lang naar kan en wilt kijken. Daarnaast heb ik ook een 'Off' state gemaakt. Deze zorgt dat alle animaties op de dj set stoppen, en gedimd worden. Eigenlijk een compleet tegenover gestelde van de eyebleed modus.
+
+Ik heb ook de standaard discs zelf aangepakt, door deze eindelijk een fatsoenlijke stijling te geven, waardoor deze daadwerkelijk voelen als discs. Ik heb ze ook een soort retro touch gegeven, wat ervoor zorgt dat ze een beetje op vinyl platen lijken.
+
+**Basic styling**
+
+<img width="1728" height="962" alt="Screenshot 2026-03-11 at 16 11 45" src="https://github.com/user-attachments/assets/3a5d8a83-78f5-46dc-9cfb-591e05e762f6" />
+
+**Eyebleed modus styling**
+Dit animeert ook!
+
+<img width="1728" height="962" alt="Screenshot 2026-03-11 at 16 12 18" src="https://github.com/user-attachments/assets/955051ac-ffbe-4e7a-88c5-3105baae5c1e" />
+
+**Off modus styling**
+
+<img width="1728" height="962" alt="Screenshot 2026-03-11 at 16 13 08" src="https://github.com/user-attachments/assets/cd66060f-1b08-41ac-8467-bc7f0102788e" />
+
+
+### Hoe lang duurde het?
+Ik heb er vandaag ruim 4 uur aan kunnen zitten. Maar daarnaast heb ik ook zeker een 1,5 uur aan workshops en intro gehad.
+
+
+###  Wat heb ik geleerd?
+Ik heb vandaag veel geleerd over style querys. Dit heeft mij ook veel meer de kans gegeven om functionaliteit toe te voegen. Ook heb ik vandaag veel geleerd over gradients, waarmee ik mijn discs heb kunnen maken naar hoe ik ze wil.
+
+<img width="347" height="486" alt="Screenshot 2026-03-11 at 16 17 11" src="https://github.com/user-attachments/assets/64106bf0-b445-459d-b78f-9c292f90dc8d" />
+
+
+
+### Wat ga ik de volgende keer doen?
+Ik ga de volgende keer door met het perfect maken van mijn style querys, en kijken wat ik nog verder kan doen om er wat meer flare aan te geven.
+
+
+
+
+
 
 
 ## Bronnen:
