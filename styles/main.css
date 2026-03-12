@@ -5,31 +5,6 @@
   --s: clamp(260px, 30vw, 520px); /* fader lengte op desktop */
 }
 
-body {
-  background: #0e0c18;
-  transition: background 200ms;
-}
-
-/* knop stand 0 */
-:root[style*="--knob: 0"] body {
-  background: radial-gradient(circle at 30% 30%, #1f1a2e, #0e0c18 55%, #05040a);
-}
-
-/* knop stand 1 */
-:root[style*="--knob: 1"] body {
-  background: radial-gradient(circle at 30% 30%, #1a2235, #0a1225 55%, #040710);
-}
-
-/* knop stand 2 */
-:root[style*="--knob: 2"] body {
-  background: radial-gradient(circle at 30% 30%, #11302a, #071a17 55%, #020a09);
-}
-
-/* knop stand 3 */
-:root[style*="--knob: 3"] body {
-  background: radial-gradient(circle at 30% 30%, #351a2c, #1d0815 55%, #0b0207);
-}
-
 html,
 body {
   height: 100%;
@@ -42,6 +17,157 @@ main {
   place-items: center;
   padding: 2vh 2vw;
   container-type: inline-size; /*  maakt main een container en container kijkt naar BREEDTE */
+}
+
+body {
+  --hue: calc(260 + (var(--knob, 0) * 30));
+  --bg-light: hsl(var(--hue) 45% 18%);
+  --bg-mid: hsl(calc(var(--hue) - 10) 50% 9%);
+  --bg-dark: hsl(calc(var(--hue) - 20) 55% 4%);
+
+  background: radial-gradient(
+    circle at 30% 30%,
+    var(--bg-light),
+    var(--bg-mid) 55%,
+    var(--bg-dark)
+  );
+}
+
+label {
+  color: pink;
+  font-family: "basset-eight", sans-serif;
+  font-weight: 200;
+  font-size: 40px;
+}
+
+/* BRON: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background: pink;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background: hotpink;
+}
+/******************/
+/* MARK: SETTINGS */
+/******************/
+
+main:has([value="eyebleed"]:checked) {
+  --eyebleed: true;
+}
+
+main:has([value="off"]:checked) {
+  --off: true;
+}
+
+/*****************/
+/* MARK: QUERIES */
+/*****************/
+
+/* 
+BRONNEN:
+Workshop Sanne
+https://ishadeed.com/article/css-container-style-queries/
+*/
+@container style(--eyebleed:true) {
+  main > div {
+    /* BRON: https://cssgradient.io/ */
+    --background: radial-gradient(
+      circle,
+      rgb(254 245 255 / 1) 0%,
+      rgb(0 21 255 / 1) 10%,
+      rgb(40 212 34 / 1) 20%,
+      rgb(202 222 73 / 1) 30%,
+      rgb(74 0 148 / 1) 40%,
+      rgb(63 184 224 / 1) 50%,
+      rgb(247 32 79 / 1) 60%,
+      rgb(140 0 108 / 1) 70%,
+      rgb(255 150 208 / 1) 80%,
+      rgb(199 255 46 / 1) 90%,
+      rgb(158 255 205 / 1) 100%
+    );
+
+    background-size: 200% 200%;
+
+    filter: hue-rotate(0deg);
+    animation:
+      eyebleedMove 6s linear infinite,
+      eyebleedPulse 3s ease-in-out infinite,
+      hueSpin 4s linear infinite;
+  }
+}
+
+@keyframes eyebleedMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes eyebleedPulse {
+  0% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 140% 140%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes hueSpin {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+/* 
+Kleine hack voor het werkend krijgen van de gradient op de discs bij Eyebleed modus 
+BRON: Sanne 
+*/
+@container not style(--off:true) {
+  @container style(--eyebleed:true) {
+    main > div > section:nth-of-type(4) > div {
+      --disc-color: linear-gradient(red, blue);
+    }
+  }
+}
+
+@container style(--off:true) {
+  main > div {
+    --background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  h1 {
+    opacity: 0.2;
+  }
+
+  main > div > section:nth-of-type(1) > div > div {
+    --animation: none;
+  }
+
+  main > div > section:nth-of-type(4) > div {
+    --spin: none;
+  }
+
+  main > div > section:nth-of-type(2) input[type="range"] {
+    --slider: linear-gradient(#141414, #0b0b0b);
+  }
 }
 
 /********************/
@@ -59,9 +185,21 @@ h1 {
 /*************************/
 /* MARK: BASE PLATE GRID */
 /*************************/
+
+header {
+  padding: 1em;
+
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
 main > div {
   display: grid;
-  background: #2f2f2f;
+  background-image: var(
+    --background,
+    linear-gradient(to bottom, #575757, #404040)
+  );
   border-radius: 2rem;
   box-sizing: border-box;
   overflow: hidden;
@@ -85,12 +223,12 @@ main > div {
 
   align-items: center;
   justify-items: center;
-}
 
-main > div > h1 {
-  grid-area: h1;
-  justify-self: start;
-  align-self: center;
+  > h1 {
+    grid-area: h1;
+    justify-self: start;
+    align-self: center;
+  }
 }
 
 /****************/
@@ -181,7 +319,7 @@ main > div > section:nth-of-type(1) {
 
       filter: brightness(calc(0.8 + (var(--fader, 50) / 120))) saturate(1.2);
 
-      animation-duration: 1.2s;
+      animation-duration: var(--animation, 1.2s);
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
 
@@ -323,7 +461,7 @@ main > div > section:nth-of-type(2) {
     -webkit-appearance: none; /* Haalt standaard browser styling weg */
     appearance: none;
 
-    background: linear-gradient(#141414, #0b0b0b);
+    background: var(--slider, linear-gradient(#141414, #0b0b0b));
     border-radius: 18px;
     box-shadow:
       inset 0 0 0 2px #1f1f1f,
@@ -418,7 +556,7 @@ main > div > section:nth-of-type(3) {
   > div {
     position: relative;
     width: clamp(70px, 10vw, 110px);
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
 
     &::before {
       content: "";
@@ -466,12 +604,88 @@ main > div > section:nth-of-type(4) {
   place-items: center;
 
   > div {
-    background: linear-gradient(red, blue);
-    border-radius: 999px;
+    position: relative;
     aspect-ratio: 1 / 1;
     width: clamp(160px, 50vw, 420px);
+    border-radius: 999px;
+    border: solid 2px #6a6a6a;
 
-    animation: spin calc(12s - (var(--fader, 50) * 0.1s)) linear infinite;
+    background: var(
+      --disc-color,
+      /* glans / reflectie */
+      linear-gradient(
+          35deg,
+          transparent 0 42%,
+          rgba(255, 255, 255, 0.16) 44% 47%,
+          rgba(255, 255, 255, 0.04) 47% 52%,
+          transparent 54% 100%
+        ),
+      /* middenlabel */
+      radial-gradient(
+          circle at center,
+          #f2dcb4 0 3.2%,
+          #b13b57 3.2% 11.5%,
+          #1c1c1c 11.5% 13.2%,
+          transparent 13.2%
+        ),
+      /* spindle ring */
+      radial-gradient(
+          circle at center,
+          transparent 0 1.1%,
+          rgba(220, 220, 220, 0.9) 1.1% 1.8%,
+          transparent 1.8% 2.2%,
+          transparent 2.2%
+        ),
+      /* vinyl grooves */
+      repeating-radial-gradient(
+          circle at center,
+          #0f0f0f 13.5%,
+          #181818 14.2%,
+          #0c0c0c 14.8%,
+          #151515 15.4%
+        ),
+      /* basis body */
+      radial-gradient(
+          circle at 50% 50%,
+          #5b5b5b 0%,
+          #1a1a1a 28%,
+          #0d0d0d 62%,
+          #2a2a2a 100%
+        )
+    );
+
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+      inset 0 0 18px rgba(255, 255, 255, 0.04),
+      inset 0 -12px 18px rgba(0, 0, 0, 0.35),
+      0 10px 22px rgba(0, 0, 0, 0.35);
+
+    animation: var(
+      --spin,
+      spin calc(12s - (var(--fader, 50) * 0.1s)) linear infinite
+    );
+  }
+
+  /* center spindle */
+  > div::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 3.5%;
+    aspect-ratio: 1 / 1;
+    transform: translate(-50%, -50%);
+    border-radius: 999px;
+
+    background: radial-gradient(
+      circle at 35% 35%,
+      #d8d8d8,
+      #7d7d7d 70%,
+      #4a4a4a
+    );
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+      0 0 0 1px rgba(0, 0, 0, 0.45);
   }
 
   > div:nth-of-type(2) {
@@ -490,7 +704,8 @@ main > div > section:nth-of-type(4) {
 /********************************/
 
 /* Een container query kijkt niet naar de viewport, maar naar de grootte van een element (container) */
-@container (min-width: 900px) { /* laat het component zelf reageren op z’n eigen breedte */
+@container (min-width: 900px) {
+  /* laat het component zelf reageren op z’n eigen breedte */
   main > div {
     grid-template-columns:
       minmax(280px, 1fr)

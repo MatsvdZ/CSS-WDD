@@ -391,5 +391,12 @@ https://codepen.io/yomateo/pen/ypbNrJ
 
 https://fonts.adobe.com/fonts/basset
 
+https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_queries
 
+https://codepen.io/MATS-the-typescripter/pen/XJjNzXG?editors=1100
 
+https://cssgradient.io/
+
+https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+
+https://ishadeed.com/article/css-container-style-queries/
