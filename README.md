@@ -414,6 +414,32 @@ Ik heb vandaag veel geleerd over style querys. Dit heeft mij ook veel meer de ka
 Ik ga de volgende keer door met het perfect maken van mijn style querys, en kijken wat ik nog verder kan doen om er wat meer flare aan te geven.
 
 
+## Zesde checkout (12-03)
+### Wat heb ik vandaag gedaan?
+We begonnen de dag vandaag met een ruime intro over wiskunde in CSS, en hoe krachtig dit eigenlijk is. 
+
+Daarna ben ik aan de slag gegaan met nog een leuk iets toevoegen, namelijk een volume meter. Deze is ook te besturen met mijn fader slider. De slider bepaalt hoe 'hoog' het geluid staat. De meter zelf loopt van groen naar rood. En als kers op de taart heb ik het zo gemaakt dat wanneer de fader op 100% staat, het laatste rode lampje begint te knipperen, wat ongeveer lijkt op 'clipping' op een echte DJ set. (Clipping is een vorm van audiovervorming dat voorkomt wanneer een audiosignaal de maximale capaciteit van de audio apparatuur overschrijdt).
+
+Ik heb nog een workshopje gevolgd van Vasilis over typografie, en heb hierbij een aantal linkjes gekregen die denk ik wel handig kunnen zijn in de zoektocht naar een leuke font.
+
+Ik heb vandaag ook weer een feedback gesprekje gehad met mijn groepje. Daarbij kreeg ik van Sanne te horen dat ik nu qua eisen alleen nog de typografie moet doen. Verder zijn er natuurlijk ook nog andere kleine dingen die nog verbeterd kunnen worden, maar de functionaliteit is er in iedergeval wel.
+
+Op het einde van de dag hadden we nog een weekly nerd.
+
+
+
+### Hoe lang duurde het?
+Ik heb in totaal zo'n 4 uur gewerkt aan mijn eigen project. Daarnaast heb ik nog iets minder dan een uurtje de workshop van Vasilis gevolgd. Daarna hebben we nog de weekly nerd gehad.
+
+
+
+###  Wat heb ik geleerd?
+Ik heb vandaag geleerd hoe sterk wiskunde kan zijn als je dit gebruikt in CSS. Ik heb met behulp van calc dan ook de thresholds berekent voor mijn volume lampjes.
+
+Verder heb ik vandaag nog kleine tweaks aan de off mode gedaan.
+
+### Wat ga ik de volgende keer doen?
+Volgende keer ga ik aan de slag met de typografie eis van de opdracht. Hiervoor ga ik eerst onderzoek doen en een juist etypografie uitzoeken, daarna ga ik hier mee spelen.
 
 
 
