@@ -675,7 +675,7 @@ main > div > section:nth-of-type(2) {
 
   /* CLIPPING ANIMATION */
   > div > div:nth-of-type(12) {
-    animation: var(--blink-animation, clip-blink 0.18s steps(2, end) infinite) ;
+    animation: var(--blink-animation, clip-blink 0.18s steps(2, end) infinite);
     animation-play-state: paused;
   }
 }
