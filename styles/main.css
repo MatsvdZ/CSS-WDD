@@ -7,7 +7,7 @@
 }
 
 * {
-  font-family: sixtyfour;
+  font-family: "sixtyfour", sans-serif;
 }
 
 html,
@@ -233,7 +233,7 @@ BRON: Sanne
 /********************/
 @font-face {
   font-family: "sixtyfour";
-  src: url("../fonts/Sixtyfour_Convergence/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf");
+  src: url("../fonts/Sixtyfour_Convergence/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf") format(truetype);
 }
 
 h1 {
