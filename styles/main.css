@@ -232,8 +232,8 @@ BRON: Sanne
 /* MARK: TYPOGRAPHY */
 /********************/
 @font-face {
-  font-family: "sixtyfour";
-  src: url("/fonts/Sixtyfour_Convergence/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf") format("truetype");
+  font-family: "sixtyfour", sans-serif;
+  src: url("../fonts/Sixtyfour_Convergence/SixtyfourConvergence-Regular-VariableFont_BLED,SCAN,XELA,YELA.ttf") format("truetype");
 }
 
 h1 {
