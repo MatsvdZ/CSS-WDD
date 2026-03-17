@@ -463,7 +463,7 @@ Robbert Boersma
 	- De voortgang wordt getoond boven het formulier in tekst.
 
 
-### Labels: 
+### Labels:
 	- Gebruik een <label for="input-id”> voor het formulierveld, en zorg dat alles een gekoppeld label heeft.
 	- Andere code voor een label, zoals aria-label=“” of title="" moeten in elk geval de zichtbare labeltekst bevatten, anders werkt het niet met spraakbesturing.
 	- “Voorna(a)m(en)” Nope! Voornaam (1 of meerdere) Yep!
@@ -588,3 +588,9 @@ https://cssgradient.io/
 https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
 
 https://ishadeed.com/article/css-container-style-queries/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/filter
+
+https://w7.pngwing.com/pngs/97/954/png-transparent-macbook-pro-djay-disc-jockey-macos-computer-icons-dj-fruit-nut-macos-mac-app-store.png

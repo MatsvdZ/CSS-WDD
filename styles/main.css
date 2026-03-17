@@ -1,8 +1,13 @@
 /*******************/
 /* MARK: BASIC CSS */
 /*******************/
+
 :root {
   --s: clamp(260px, 30vw, 520px); /* fader lengte op desktop */
+}
+
+* {
+  font-family: sixtyfour;
 }
 
 html,
@@ -35,7 +40,6 @@ body {
 
 label {
   color: pink;
-  font-family: "basset-eight", sans-serif;
   font-weight: 200;
   font-size: 40px;
 }
@@ -101,6 +105,12 @@ https://ishadeed.com/article/css-container-style-queries/
       eyebleedPulse 3s ease-in-out infinite,
       hueSpin 4s linear infinite;
   }
+
+  h1 {
+    animation:
+      textRotate 0.5s infinite,
+      glitchFont 1s alternate infinite;
+  }
 }
 
 @keyframes eyebleedMove {
@@ -132,6 +142,43 @@ https://ishadeed.com/article/css-container-style-queries/
     filter: hue-rotate(360deg);
   }
 }
+
+@keyframes textRotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes glitchFont {
+  25% {
+    font-variation-settings:
+      "SCAN" 0,
+      "YELA" 0,
+      "XELA" 0;
+  }
+  50% {
+    font-variation-settings:
+      "SCAN" 25,
+      "YELA" 25,
+      "XELA" 80;
+  }
+  75% {
+    font-variation-settings:
+      "SCAN" 50,
+      "YELA" 50,
+      "XELA" -80;
+  }
+  100% {
+    font-variation-settings:
+      "SCAN" 100,
+      "YELA" 100,
+      "XELA" 0;
+  }
+}
+
 /* 
 Kleine hack voor het werkend krijgen van de gradient op de discs bij Eyebleed modus 
 BRON: Sanne 
@@ -147,6 +194,7 @@ BRON: Sanne
 @container style(--off:true) {
   h1 {
     opacity: 0.2;
+    --animation: none;
   }
 
   main > div > section:nth-of-type(1) > div > div {
@@ -183,13 +231,34 @@ BRON: Sanne
 /********************/
 /* MARK: TYPOGRAPHY */
 /********************/
+@font-face {
+  font-family: "sixtyfour";
+  src: url("/fonts/Sixtyfour_Convergence/SixtyfourConvergence-Regular-VariableFont_BLED\,SCAN\,XELA\,YELA.ttf");
+}
+
 h1 {
-  font-family: "basset-eight", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 30px;
-  color: white;
   margin: 0;
+
+  font-variation-settings:
+    "SCAN" 10,
+    "YELA" 80;
+}
+
+span {
+  display: inline-block;
+  animation: grow infinite 1s ease-in-out alternate;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+    rotate: 0deg;
+  }
+  to {
+    transform: scale(1.5);
+    rotate: 360deg;
+  }
 }
 
 /*************************/
