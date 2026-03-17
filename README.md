@@ -541,8 +541,35 @@ Verder heb ik vandaag nog kleine tweaks aan de off mode gedaan.
 
 Volgende keer ga ik aan de slag met de typografie eis van de opdracht. Hiervoor ga ik eerst onderzoek doen en een juist etypografie uitzoeken, daarna ga ik hier mee spelen.
 
-## Bronnen:
 
+
+
+## Zevende checkout (17-03)
+
+### Wat heb ik vandaag gedaan?
+Ik heb vandaag dus gewerkt aan mijn typografie. Ik heb een variabele font gevonden die ik ga gebruiken voor mijn project. Dit is de font 'Sixtyfour Convergence' geworden. Deze font gebruik ik op de baseplate van mijn DJ set, en voor de tekst bij de checkboxes. Ik heb hiervoor gekozen omdat deze ook is opgebouwd uit lijnen, en dat vond ik wel mooi passen bij mijn geluidsgolven die ik heb gemaakt. 
+
+<img width="1219" height="451" alt="Screenshot 2026-03-17 at 15 41 51" src="https://github.com/user-attachments/assets/34a9177f-056d-4c02-af59-0f28d888c86b" />
+
+Hierna ben ik gaan spelen met de mogelijkheden van het animeren en aanpassen van de font. Ik heb het nu zo gemaakt dat de font animeert wanneer de eyebleed modus aan staat en van kleuren verandert dankzij een filter die ik erover heen gooi. Het moet natuurlijk ook een fitting title zijn dus heb ik gekozen voor "Music for the eyes" omdat er natuurlijk geen geluid uit mijn DJ set komt, maar er wel veel te zien is. Ook heb k er uiteraard voor gezorgd dat er een 'off' state is.
+
+Ik heb ook nog snel een favicon toegevoegd, daar worden de docenten altijd zo blij van :) 
+
+Tot slot heb ik nog even gewerkt aan mijn bronnen/bronnenlijst en deze ook netjes in de code verwerkt.
+
+### Hoe lang duurde het?
+Ik heb vandaag ongeveer 3 tot 4 uur aan mijn project gezeten. Dit komt omdat ik vandaag eigenlijk vooral de puntjes op de i wil zetten, om daarna verder te kunnen met de laatste dingen voor browser technologies.
+
+### Wat heb ik geleerd?
+Ik heb vandaag geleerd over variable fonts en hoe ik deze kan gebruiken. Ik heb daar een beetje mee lopen spelen en ook animaties gemaakt.
+
+
+### Wat ga ik de volgende keer doen?
+Waarschijnlijk is de volgende keer de evaluatie :)
+
+
+
+## Bronnen:
 https://www.algoriddim.com/hardware
 
 https://css-tricks.com/the-shapes-of-css/
