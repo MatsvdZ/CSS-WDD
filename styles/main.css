@@ -247,7 +247,7 @@ h1 {
 
 span {
   display: inline-block;
-  animation: grow infinite 1s ease-in-out alternate;
+  animation: grow infinite var(--animation, 1s) ease-in-out alternate;
 }
 
 @keyframes grow {
