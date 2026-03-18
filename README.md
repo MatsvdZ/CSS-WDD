@@ -407,111 +407,6 @@ Ik heb vandaag veel geleerd over style querys. Dit heeft mij ook veel meer de ka
 
 Ik ga de volgende keer door met het perfect maken van mijn style querys, en kijken wat ik nog verder kan doen om er wat meer flare aan te geven.
 
-## Weekly geek (12-03)
-
-Robbert Boersma
-
-**Ff formulieren maken met NL design system richtijnen**
-
-### Opbouw van een formulier:
-
-    - Introductietekst
-    - Informatie vragen die nodig is
-    - Gebruiker kan voor inzending de ingevoerde waardes controleren, wijzigen of ongedaan maken
-    - Na “volgende” of “verzenden” verschijnt een samenvatting van alle fouten
-    - Na verzenden verschijnt een duidelijke bevestiging
-
-    - Het is erg fijn als het lukt om een formulier op te slaan en later verder te gaan.
-
-    - Verplichte velden goed aangeven
-    - Uitleggen waarom je specifieke informatie nodig hebt
-    - Gebruiker dezelfde informatie niet twee keer vragen
-    - Geen jargon of gekke afkorting(en)
-
-### Design van componenten:
-
-    - Check het kleurcontrast van componenten. De randen moeten voldoende contrast hebben met de achtergrondkleur
-    - Check de kleurcontrasten van subtielere tekst. De tekst van de beschrijvingen en van de placeholder moet voldoende contrast hebben met de achtergrondkleur.
-    - Zijn de componenten groot genoeg? 44x44px is je vriend.
-
-### Design van het formulier:
-
-    - Staan er buttons aan het eind van de regel, zoals “volgende”? Plaats de buttons aan het begin van de regel, waar iedereen ze kan vinden.
-    - De voortgang wordt getoond boven het formulier in tekst, bijvoorbeeld “stap 2 van 4”
-    - De navigatie (volgende, vorige, annuleren) is consistent in elke stap.
-    - Het is duidelijk in welke stap het formulier daadwerkelijk wordt verzonden.
-    - Elk invoerveld heeft een zichtbaar label dat boven het invoerveld staat. Alleen bij de zoekfunctie is de label eventueel vervangen door alleen een placeholder
-    - Er staat ‘verplicht’ of ‘niet verplicht’ in tekst, niet alleen met het asterix teken.
-
-### Flow van het formulier:
-
-    - Staan de formuliervelden in logische volgorde?
-    - Zijn er meerdere contactmogelijkheden om hulp te krijgen? Zorg voor meerdere manieren zodat het voor iedereen mogelijk is contact op te nemen, bijvoorbeeld email, chat en 		telefoon.
-    - Wordt hulp op meerdere plekke aangeboden?
-    - De voortgang wordt getoond boven het formulier in tekst.
-
-### Labels:
-
-    - Gebruik een <label for="input-id”> voor het formulierveld, en zorg dat alles een gekoppeld label heeft.
-    - Andere code voor een label, zoals aria-label=“” of title="" moeten in elk geval de zichtbare labeltekst bevatten, anders werkt het niet met spraakbesturing.
-    - “Voorna(a)m(en)” Nope! Voornaam (1 of meerdere) Yep!
-
-### Makkelijker invullen
-
-    - Als de gebruiker is ingelogd, dan worden bekende gegevens vooral ingevuld.
-    - Knippen en plakken is overal toegestaan
-    - Controleer of de browser autocomplete aanbiedt om velden vooraf in te vullen, waar je dat verwacht.
-
-### Beschrijvingen bij een veld
-
-    - Belangrijke uitleg is altijd zichtbaar. Essientiële informatie staat in een description of in de labeltekst, niet alleen in een placeholder tooltip.
-    - Extra teksten bij een formulierveld zijn gekoppeld met aria-describedby op het formulier-element, zoals <input> of <select>
-
-- Beschrijving, foutmeldingen
-- Feedback zoals ’42 van de 100 tekens’ of ‘je wachtwoord voldoet aan de eisen’
-- De beschrijving en foutmeldingen van Checkbox Group en Radio Group zijn gekoppeld aan de <fieldset> niet aria-describedby
-
-### Controleren
-
-    - De laatste stap toont een samenvatting van alle ingevoerde gegevens.
-    - Het formulier biedt de mogelijkheid om een inzending te controleren, te wijzigen of ongedaan te maken.
-    - Voorkom met <bdi translate="no”> dat wat de gebruiker zelf heeft ingevoerd, wordt vertaald. Dit is met name op de controle-pagina en de bevestigingspagina.
-
-### Bevestiging
-
-    - Is er een duidelijke bevestiging? Een goede bevestiging vermeldt welke informatie is verstuurd.
-
-### Validatie
-
-    - De regels voor een invoerveld zijn vooraf duidelijk, bijvoorbeeld: welke tekens, of hoe lang de tekst mag zijn.
-    - Boven het formulier staat uitleg over hoe de verplichte of niet verplichte velden zijn aangemerkt.
-
-### Design van foutmeldingen
-
-    - Foutmeldingen staan bij het betreffende veld
-
-### Toetsenbord
-
-    - Doorloop het formulier volledig met alleen het toetsenbord. De volgende dingen moeten goed werken:
-
-- Elk invoerveld, elke button en elke link is bereikbaar met de tab toets.
-- Tabvolgorde is logisch
-  - De focus indicator is goed zichtbaar
-  - Sommige componenten werken met andere toetsen dan tab.
-
-### Screenreader - invullen
-
-    - Het label van elk veld wordt voorgelezen als het veld focus krijgt.
-    - De beschrijving van een veld wordt voorgelezen als het veld focus krijgt.
-    - Verplichte velden worden verplicht aangeduid bij het voorlezen.
-    - Foutmeldingen en feedback onderbreken de gebruiker niet bij het invullen.
-    - Feedback over invoer (bijvoorbeeld: of ‘je wachtwoord voldoet aan de eisen’) worden automatisch voorgelezen, zonder dat de gebruiker er naartoe hoeft te navigeren
-
-### Screenreader - Navigatie
-
-    - De voortgang is hoorbaar voor screenreadergebruikers: “stop 2 van 4” of vergelijkbaar.
-    - Na verzenden verschijnt een duidelijke bevestiging dat het formulier succesvol is verzonden.
-    - Positieve statusberichten na het versturen (zoals “formulier verzonden”)
 
 ## Zesde checkout (12-03)
 
@@ -566,6 +461,132 @@ Ik heb vandaag geleerd over variable fonts en hoe ik deze kan gebruiken. Ik heb 
 
 ### Wat ga ik de volgende keer doen?
 Waarschijnlijk is de volgende keer de evaluatie :)
+
+
+
+
+## Week 4 - Completion
+### Final result!
+
+<img width="1728" height="961" alt="Screenshot 2026-03-18 at 09 52 42" src="https://github.com/user-attachments/assets/a50e702e-7d17-4d24-a110-995b950b316f" />
+
+<img width="1728" height="962" alt="Screenshot 2026-03-18 at 09 53 00" src="https://github.com/user-attachments/assets/4d9fc5ef-d2cc-4a98-96fc-aea45714c81e" />
+
+<img width="1728" height="961" alt="Screenshot 2026-03-18 at 09 53 15" src="https://github.com/user-attachments/assets/802dc753-54b1-4d1f-a12e-859607671b94" />
+
+<img width="654" height="962" alt="Screenshot 2026-03-18 at 09 54 34" src="https://github.com/user-attachments/assets/21f04eb6-cee0-492c-93a8-f65ceac12002" />
+
+Dit is hem dan, mijn DJ paneel gemaakt in alleen HTML en CSS (en een klein beetje toegestaande JavaScript :) )
+
+Ik heb deze paar weken gewerkt aan een DJ paneel die op verschillende inputs reageert, en ook andere functies hebben. Ik heb namelijk de volgende funtionaliteiten toegevoegd:
+
+
+
+#### LED Geluidsmeter
+Sound meter met 'LED' lampjes om zo het geluidsniveau na te bootsen. Deze reageert op de input van de fader die ik heb gemaakt, en zodra de fader op standje 100 staat, speelt de 'blink' animatie af om zo dus dat clippen na te maken.
+
+<img width="58" height="275" alt="Screenshot 2026-03-18 at 10 07 45" src="https://github.com/user-attachments/assets/d1f89605-af82-4ceb-bf0d-c5afc5b5dcdd" />
+
+<img width="356" height="807" alt="Screenshot 2026-03-18 at 10 09 13" src="https://github.com/user-attachments/assets/c289ab5b-1b96-4c08-9cc8-3a70ef208090" />
+
+<img width="603" height="959" alt="Screenshot 2026-03-18 at 10 09 37" src="https://github.com/user-attachments/assets/f2ca376c-0fc0-49b7-812d-d3ff1ab8a8aa" />
+
+
+#### Geluidsgolven
+
+Geluidsgolven die op een random timing lopen, met verschillende animaties om het zo random mogelijk te maken, je kunt hier de 'brightness' van aanpassen door de fader te gebruiken.
+
+<img width="857" height="329" alt="Screenshot 2026-03-18 at 10 11 31" src="https://github.com/user-attachments/assets/c5edf131-6d58-4333-8fc5-2e5edb5bfceb" />
+
+
+Hier style ik de waves die je ziet, en maak ik drie animatie soorten aan, voor randomness.
+
+<img width="578" height="966" alt="Screenshot 2026-03-18 at 10 12 35" src="https://github.com/user-attachments/assets/41d48d83-9a15-4511-b83b-144f08c93763" />
+
+
+Hier geef ik de bars delays om de randomness toe te voegen zodat deze nooit hetzelfde lijken.
+
+<img width="183" height="449" alt="Screenshot 2026-03-18 at 10 13 00" src="https://github.com/user-attachments/assets/5c2fbcba-3f1a-486e-b523-8bd7f260b8cd" />
+
+
+#### Slider / Fader
+De slider lijkt echt op een slider van een DJ paneel. Deze bestuurt dus de brightness van de geluidsgolven, maar ook de ronddraai snelheid van de discs, en de hoogte van de geluidsLEDjes.
+
+<img width="448" height="83" alt="Screenshot 2026-03-18 at 10 19 52" src="https://github.com/user-attachments/assets/469bd554-25ef-43ed-adc9-356580298808" />
+
+<img width="561" height="974" alt="Screenshot 2026-03-18 at 10 15 14" src="https://github.com/user-attachments/assets/a0b3e3f8-d67e-46e1-97d1-e178c7e07f91" />
+
+
+#### Knob
+Ik heb ook nog een knob gemaakt (slider die lijkt op een draaiknop). Deze bestuurt de achtergrond kleur.
+
+<img width="114" height="109" alt="Screenshot 2026-03-18 at 10 20 35" src="https://github.com/user-attachments/assets/a3baf2a5-55bc-4aed-8dab-69e812c5cd34" />
+
+
+Hier maak ik de achtergrond kleur door middel van calc aan de hand van variabelen op een radial gradient.
+
+<img width="528" height="381" alt="Screenshot 2026-03-18 at 10 21 46" src="https://github.com/user-attachments/assets/201f751a-9e41-4db6-b4d3-f6d79f2367a0" />
+
+Dit is de algemene styling voor de knob, ook zie je hoe ik de knob positie aanpas door calc te gebruiken om de positie te bepalen.
+
+<img width="582" height="850" alt="Screenshot 2026-03-18 at 10 23 20" src="https://github.com/user-attachments/assets/2c5f3fa1-4659-4173-997d-14624742f2b7" />
+
+
+#### Style querys
+Daarnaast heb ik met style querys nog twee soorten 'states' gemaakt voor mijn paneel. Zo heb ik een 'crazy' mode, en een 'off' mode. De naam van de 'off' mode zegt het al. Deze modus dimt alle lichtjes en stopt alle animaties, zodat deze dus echt uit staat. De 'crazy' mode is eigenlijk een soort gimmick waarin ik zoveel mogelijk random kleuren, patronen en animaties heb toegevoegd. Mensen op feestjes houden vaak van specifieke substanties, dit is hoe ik me voorstel hoe dat er dan ongeveer uitziet :).
+
+Hier zie je hoe ik de achtergrond van de 'crazy' mode gemaakt en geanimeerd heb.
+
+<img width="573" height="957" alt="Screenshot 2026-03-18 at 10 25 23" src="https://github.com/user-attachments/assets/6877363c-505b-4236-83c0-155990b8664b" />
+
+En hier zie je dat ik ook mijn variable font een animatie heb gegeven, die dus alleen afspeelt wanneer de mode aan staat
+
+<img width="172" height="382" alt="Screenshot 2026-03-18 at 10 26 21" src="https://github.com/user-attachments/assets/352b0ab3-20a5-489c-897f-5616981066d9" />
+
+Hieronder staat dan ook hoe ik de 'off' modus heb gemaakt. Eigenlijk zet ik gewoon voornamelijk de animaties en lichtgevende effecten uit.
+
+<img width="493" height="698" alt="Screenshot 2026-03-18 at 10 27 11" src="https://github.com/user-attachments/assets/070799db-0b14-4f56-b98b-09e4312ac13f" />
+
+#### Responsiveness
+Verder heb ik mijn paneel mooi responsive gemaakt, door wanneer de container kleiner wordt dan 900px het paneel om wordt gegooid naar een paneel met een enkele disc, en andere layout. De foto hiervan staat boven.
+
+Dit heb ik gedaan met grid layouts, om zo het grote en het kleine scherm op andere manieren te ordenen
+
+<img width="481" height="495" alt="Screenshot 2026-03-18 at 10 30 43" src="https://github.com/user-attachments/assets/dc017ed2-36ef-4635-8afc-0f984e78e341" />
+
+Daarna heb ik een container query gebruikt om zo bij een breedte van 900px de grote variant te maken door deze in te delen met grid layout.
+
+<img width="387" height="1016" alt="Screenshot 2026-03-18 at 10 31 37" src="https://github.com/user-attachments/assets/c2711e9d-f2da-44fd-bed8-5fb2ba3d037c" />
+
+
+### Wat ging goed, wat was lastig, en waar ben ik het meest trots op?
+Ik heb in de afgelopen jaren altijd voor het vak met coderen gekozen, maar ik heb de laatste tijd vooral veel gewerkt aan de backend kant van het coderen met JavaScript. Ik had me dus nog niet zo zeer goed verdiept in CSS voordat we dit vak hadden. Het was daarom aan het begin wel weer even inkomen met CSS. het is uiteindelijk wel weer gelukt om er lekker in te komen, maar sommige van de nieuwe technieken was nog steeds even wennen, zoals het gebruik van nesten in CSS, wel ben ik erachter gekomen dat dit echt heel handig is om te gebruiken. Ook style querys waren nieuw, maar ook hier heb ik de kracht van gebruikt.
+
+Daarnaast was het vaak ook gewoon veel opzoeken om relatief 'kleine' dingen aan te passen/te fixen, maarja dat is nou eenmaal hoe het is met coderen.
+
+Maar wat nou echt het lastigste was, en wat eigenlijk vooral veel tijd in beslag nam, was het niet gebruik kunnen maken van classes en ID's. Het was soms erg lastig om ergens de juiste selector voor te vinden en ook netjes te kunnen gebruiken. 
+
+Ik ben het meest trots op eigenlijk alles wat met nieuwe code te maken heeft. Ik ben vaak iemand die houdt van het vasthouden bij dingen die ik al weet/ken. Dus door deze verschillende nieuwe methodes te gebruiken moet ik eigenlijk een beetje uit mijn comfort zone kruipen, en dat is natuurlijk goed! 
+
+Maar project gewijs ben ik het meest trots op de volume meter en op de style querys. De volume meter is in dat opzicht niet eens hele ingewikkelde code, maar het was wel leuk om alle verschillende componenten op elkaar af te stemmen en dit er goed uit te laten zien. De style querys vond ik gewoon grappig om te doen, maar kwamen toch ook soms nog wel wat probleempjes naar boven met het gebruik van variabelen maar deze heb ik wel op kunnen lossen. 
+
+
+
+### Welke experimenten heb ik geprobeerd die mislukt zijn?
+Waar ik het meeste mee heb geëxperimenteerd is eigenlijk de algemene vormgeving en de vibe die ik wil afgeven. Ook de layout heb ik meerdere keren omgegooid om zo tot een fijne en bruikbare layout te komen die ook goed te schalen is. 
+
+
+### Heb ik nieuwe inzichten over het gebruik en de kracht van CSS?
+Absoluut! Ik wist aan het begin totaal niet dat je zoveel kon doen met enkel CSS, ik had verwacht dat er bij dit soort dingen véél meer JavaScript zou komen kijken. Bijvoorbeeld calc. Ik had geen idee dat je dit voor zo veel verschillende dingen kon gebruiken. Ook de style querys hebben mij verbaasd over wat je daar allemaal mee kan. 
+
+Ook is het gebruik van variabelen erg handig en heel sterk om te gebruiken.
+
+
+
+### Wat wil ik verder ontdekken?
+Ik wil in de volgende projecten en vooral voor mijn eigen site veel meer doen met CSS, al ga ik dan wel iets meer gebruik maken van classen en ID's ;). Als ik hieraan begin wil ik eigenlijk nog verder onderzoek doen naar nieuwe technieken die ik nog niet heb gebruikt tijdens dit vak, want ik heb er in vergelijking met het aantal nieuwe technieken natuurlijk niet zo veel gebruikt. Er zijn dus vast nog veel meer manieren om dingen te doen en misschien zelfs om dingen te doen waarvan ik niet eens weet dat het kan in CSS.
+
+
 
 
 
