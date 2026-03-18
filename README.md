@@ -640,3 +640,5 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 https://developer.mozilla.org/en-US/docs/Web/CSS/calc
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword
+
+https://chatgpt.com/share/69b95cae-5f78-800a-bc7a-6cd889da0867
